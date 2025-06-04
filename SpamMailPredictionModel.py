@@ -38,7 +38,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_
 
 # Feature Extraction
 # transform the text data to feature vectors that can be used as input to the Logistic regression
-feature_extraction = TfidfVectorizer(min_df=1, stop_words='english', lowercase='True')
+feature_extraction = TfidfVectorizer(min_df=1, stop_words='english', lowercase=True)
 
 X_train_features = feature_extraction.fit_transform(X_train)
 X_test_features = feature_extraction.transform(X_test)
